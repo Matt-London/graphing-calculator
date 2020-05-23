@@ -9,10 +9,8 @@
 using namespace std;
 
 int main() {
-    Coordinate a(0, 0);
-    Coordinate b(1, 1);
-    Coordinate c(-1, 1);
+    Linear test;
+    Linear test1;
+    printf("%i\n", test1.equals(test1));
 
-    Quadratic eq(a, b, c);
-    cout << eq.print_equation() << "\n";
 }
