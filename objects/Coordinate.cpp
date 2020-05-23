@@ -10,7 +10,7 @@ class Coordinate {
 
     public:
     
-        //Constructors
+        // ================ Constructors ================
         Coordinate(double x, double y) {
             this->x = x;
             this->y = y;
@@ -20,7 +20,7 @@ class Coordinate {
             y = 0;
         }
 
-        // Sets
+        // ================ Sets ================
         void set_x(double x) {
             this->x = x;
         }
@@ -28,7 +28,7 @@ class Coordinate {
             this->y = y;
         }
 
-        // Gets
+        // ================ Gets ================
         double get_x() {
             return x;
         }
@@ -36,15 +36,15 @@ class Coordinate {
             return y;
         }
 
-        // Methods
+        // ============ Methods ===============
         bool equals(Coordinate b) {
-            if(this->get_x() == b.get_x() && this->get_y() == b.get_y()) {
+            if(this->x == b.get_x() && this->x == b.get_y()) {
                 return true;
             }
             return false;
         }
 
-        // Debug
+        // ================ Debug ================
         string print_pair() {
             return "(" + to_string(x) + ", " + to_string(y) + ")";
         }
