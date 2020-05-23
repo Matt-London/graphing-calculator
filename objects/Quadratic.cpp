@@ -50,7 +50,7 @@ class Quadratic {
 
 
     public:
-        // Constructors
+        // ================ Constructors ================
         Quadratic() {
             a = 0;
             b = 0;
@@ -69,7 +69,7 @@ class Quadratic {
             this->process_coordinates(one, two, three);
         }
 
-        // Sets
+        // ================ Sets ================
         void set_a(double a) {
             this->a = a;
         }
@@ -80,7 +80,7 @@ class Quadratic {
             this->c = c;
         }
 
-        // Gets
+        // ================ Gets ================
         double get_a() {
             return a;
         }
@@ -91,7 +91,20 @@ class Quadratic {
             return c;
         }
 
-        // Debug
+        // ================ Methods ================
+        bool equals(Quadratic test) {
+            if(test.get_a() == a && test.get_b() == b && test.get_c() == c) {
+                return true;
+            }
+            return false;
+        }
+
+        // Returns f(x) from x
+        double trace(double x) {
+            return (a * pow(x, (double) 2)) + (b * x) + c;
+        }
+
+        // ================ Debug ================
         string print_equation() {
             return "f(x) = " + to_string(a) + "x^2 + " + to_string(b) + "x + " + to_string(c);
         }
