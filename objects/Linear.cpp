@@ -31,7 +31,7 @@ class Linear {
     
     public:
 
-        //Constructors
+        // ================ Constructors ================
         Linear() {
             m = 0;
             b = 0;
@@ -53,7 +53,7 @@ class Linear {
             this->process_coordinates(a, b);
         }
 
-        // Sets
+        // ================ Sets ================
         void set_slope(double slope) {
             m = slope;
         }
@@ -67,7 +67,7 @@ class Linear {
             }
         }
 
-        // Gets
+        // ================ Gets ================
         double get_slope() {
             return m;
         }
@@ -78,7 +78,19 @@ class Linear {
             return sign;
         }
 
-        // Debug
+        // =============== Methods ================
+        bool equals(Linear a) {
+            if(m == a.get_slope() && b == a.get_yInt()) {
+                return true;
+            }
+            return false;
+        }
+        // Returns f(x) from x
+        double trace(double x) {
+            return (m * x) + b;
+        }
+
+        // ================ Debug ===================
         string print_equation() {
             return "f(x) = " + to_string(m) + "x " + sign + " " + to_string(b);
         }
