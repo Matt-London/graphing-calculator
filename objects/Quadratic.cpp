@@ -106,7 +106,7 @@ class Quadratic {
 
         // returns x from f(x)
         double *solve(double y) {
-            double xVals[2];
+            static double xVals[2];
             if(pow(b, ((double) 2) - 4 * a * c) < 0) {
                 return NULL;
             }
