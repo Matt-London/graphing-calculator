@@ -89,6 +89,10 @@ class Linear {
         double trace(double x) {
             return (m * x) + b;
         }
+        // returns x from f(x)
+        double solve(double y) {
+            return (y - b) / m;
+        }
 
         // ================ Debug ===================
         string print_equation() {

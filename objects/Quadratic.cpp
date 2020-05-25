@@ -104,6 +104,22 @@ class Quadratic {
             return (a * pow(x, (double) 2)) + (b * x) + c;
         }
 
+        // returns x from f(x)
+        double *solve(double y) {
+            double xVals[2];
+            if(pow(b, ((double) 2) - 4 * a * c) < 0) {
+                return NULL;
+            }
+            // Solve through quadratic formula
+            // Plus
+            xVals[0] = (-1 * b + (pow(b, ((double) 2) - 4 * a * c) < 0)) / (2 * a);
+
+            // Minus
+            xVals[1] = (-1 * b - (pow(b, ((double) 2) - 4 * a * c) < 0)) / (2 * a);
+            return xVals;
+
+        }
+
         // ================ Debug ================
         string print_equation() {
             return "f(x) = " + to_string(a) + "x^2 + " + to_string(b) + "x + " + to_string(c);
