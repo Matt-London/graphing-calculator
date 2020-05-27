@@ -1,5 +1,9 @@
-Test trace
-Test solve
+Short Term:
+Fix scope issue with Cartesian graph variable
+
+
+
+Long Term:
 
 Build grapher
 Build graphics system
