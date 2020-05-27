@@ -5,6 +5,7 @@
 #include "objects/Coordinate.cpp"
 #include "objects/Linear.cpp"
 #include "objects/Quadratic.cpp"
+#include "objects/Cartesian.cpp"
 
 using namespace std;
 
