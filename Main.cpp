@@ -11,10 +11,9 @@
 using namespace std;
 
 int main() {
-    Cartesian test(10, 20);
-    Coordinate testc(2, 3);
-    test.plot(testc);
-    testc.set_coord(0.5, 4);
-    test.plot(testc);
+    Cartesian test(30, 60);
+    for(int i = -14; i < 30; i++) {
+        test.plot((double) i, (double) pow(i, 2));
+    }
     test.print_graph();
 }
