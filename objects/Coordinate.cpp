@@ -27,6 +27,10 @@ class Coordinate {
         void set_y(double y) {
             this->y = y;
         }
+        void set_coord(double x, double y) {
+            this->x = x;
+            this->y = y;
+        }
 
         // ================ Gets ================
         double get_x() {
