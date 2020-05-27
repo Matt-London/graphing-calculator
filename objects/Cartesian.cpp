@@ -62,18 +62,22 @@ class Cartesian {
                 printf("\n");
             }
         }
-        bool plot(Coordinate point) {
-            int x = point.get_x();
-            int y = point.get_y();
-            int xLoc = xAxis + x;
-            int yLoc = yAxis - y;
-            if((xLoc > width || xLoc < 0) || (yLoc > height || yLoc < 0)) {
+        bool plot(double x, double y) {
+            int xLoc = round(xAxis + x);
+            int yLoc = round(yAxis - y);
+            if((xLoc >= width || xLoc < 0) || (yLoc >= height || yLoc < 0)) {
                 return false;
             }
             graph[yLoc][xLoc] = '*';
             // cout << yLoc << " " << xLoc;
             return true;
         }
+        bool plot(Coordinate point) {
+            int x = point.get_x();
+            int y = point.get_y();
+            return plot(x, y);
+        }
+        
 
         // ================ Sets ================
         void set_height(int h) {
