@@ -1,5 +1,5 @@
 Short Term:
-Fix scope issue with Cartesian graph variable
+Fix .plot() to consider scale
 
 
 
