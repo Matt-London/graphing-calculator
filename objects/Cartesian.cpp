@@ -62,6 +62,9 @@ class Cartesian {
                 printf("\n");
             }
         }
+
+        // Plot points
+        //  Relative points on graph
         bool plot(double x, double y) {
             int xLoc = round(xAxis + x);
             int yLoc = round(yAxis - y);
@@ -77,7 +80,42 @@ class Cartesian {
             int y = point.get_y();
             return plot(x, y);
         }
+
+        // Exact points on vector
+        bool vector_plot(Coordinate point) { // Discouraged use
+            int x = point.get_x();
+            int y = point.get_y();
+            return vector_plot(x, y);
+        }
+        bool vector_plot(double x, double y) {
+            if((x >= width || x < 0) || (y >= height || y < 0)) {
+                return false;
+            }
+            graph[y][x];
+            return true;
+        }
         
+        // Plot equations
+        void plot(Linear eq) { // Void?
+            bool trip = false;
+            double m = eq.get_slope();
+            double b = eq.get_yInt();
+
+            for(int x = -1 * xAxis; x < xAxis; x++) {
+                double y = (m * x) + b;
+                plot(x, y);
+            }
+        }
+        void plot(Quadratic eq) {
+            double a = eq.get_a();
+            double b = eq.get_b();
+            double c = eq.get_c();
+
+            for(int x = -1 * xAxis; x < xAxis; x++) {
+                double y = (a * pow(x, (double) 2) + (b * x) + c);
+                plot(x, y);
+            }
+        }
 
         // ================ Sets ================
         void set_height(int h) {
