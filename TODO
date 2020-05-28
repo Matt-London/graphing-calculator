@@ -3,6 +3,7 @@ Fix .plot() to consider scale
 Add makefile
 Make an on_graph check as a function
 Build an array of coordinates to rebuild in case scale or size of graph changes
+Add update method to cartesian to update after scale changes and such
 
 Long Term:
 Build graphics system
