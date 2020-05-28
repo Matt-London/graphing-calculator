@@ -1,9 +1,8 @@
 Short Term:
 Fix .plot() to consider scale
-
-
+Add makefile
+Make an on_graph check as a function
+Build an array of coordinates to rebuild in case scale or size of graph changes
 
 Long Term:
-
-Build grapher
 Build graphics system
