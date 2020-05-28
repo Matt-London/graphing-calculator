@@ -5,14 +5,16 @@ using namespace std;
 
 class Cartesian {
     private:
-        int height;
-        int width;
-        int yScale;
-        int xScale;
-        int yAxis;
-        int xAxis;
-        bool axis = true;
+        int height; // Height of graph in y axis
+        int width; // Width of graph in x axis
+        int yScale; // drawn units / representative units
+        int xScale; // drawn units / representative units
+        int yAxis; // Index of the y axis
+        int xAxis; // Index of the x axis
+        bool axis = true; // Show axis
+
         vector<vector<char>> graph;
+        vector<Coordinate> plotted; // Lists all coordinates graphed
     
     public:
         // ================ Constructors ================
@@ -48,6 +50,13 @@ class Cartesian {
                         else {
                             graph[i][j] = ' ';
                         }
+                    }
+                }
+            }
+            else {
+                for(int i = 0; i < graph.size(); i++) {
+                    for(int j = 0; j < graph[0].size(); j++) {
+                        graph[i][j] = ' ';
                     }
                 }
             }
@@ -123,6 +132,9 @@ class Cartesian {
         }
         void set_width(int w) {
             width = w;
+        }
+        void set_axis(bool a) {
+            axis = a;
         }
 
         // ================ Gets ================
