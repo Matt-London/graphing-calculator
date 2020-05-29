@@ -42,7 +42,7 @@ class Coordinate {
 
         // ============ Methods ===============
         bool equals(Coordinate b) {
-            if(this->x == b.get_x() && this->x == b.get_y()) {
+            if(this->x == b.get_x() && this->y == b.get_y()) {
                 return true;
             }
             return false;
