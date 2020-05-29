@@ -19,10 +19,6 @@ int main() {
     test.plot(l);
     test.set_height(30);
     test.set_width(60);
-    // printf("\n\n=====================================================\n\n");
-    // vector<Coordinate> b = test.get_plotted();
-    // for(int i = 0; i < b.size(); i++) {
-    //     printf("%s, ", b[i].print_pair());
-    // }
+
     test.print_graph();
 }
