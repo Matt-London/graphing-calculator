@@ -1,0 +1,23 @@
+Main.cpp:
+Various tests
+
+Coordinate.cpp:
+Fixed .equals()
+Previously compared a.get_x() to b.get_y()
+Now compares x to x and y to y
+
+Linear.cpp:
+No changes
+
+Quadratic.cpp:
+No changes
+
+Cartesian.cpp:
+Increased modularity through methods
+Added update feature which redraws the graph
+Added limit feature to graph points not visible
+Added default constructor
+Added point backup feature which saves plotted points
+Fixed set height and width
+Various speed enhancements
+
