@@ -11,11 +11,18 @@
 using namespace std;
 
 int main() {
-    Cartesian test(30, 60);
-    Coordinate one(-5, 22);
-    Coordinate two(2, -5);
-    Coordinate three(-25, 1);
-    Quadratic lin(0.01, 0, -10);
-    test.plot(lin);
+    Cartesian test;
+    Quadratic q(1, 0, 0);
+    Linear l(1, 0);
+
+    test.plot(q);
+    test.plot(l);
+    test.set_height(30);
+    test.set_width(60);
+    // printf("\n\n=====================================================\n\n");
+    // vector<Coordinate> b = test.get_plotted();
+    // for(int i = 0; i < b.size(); i++) {
+    //     printf("%s, ", b[i].print_pair());
+    // }
     test.print_graph();
 }
