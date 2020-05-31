@@ -12,8 +12,8 @@ using namespace std;
 
 int main() {
     Cartesian test;
-    Quadratic q(1, 0, 0);
-    Linear l(1, 0);
+    Quadratic q(1, 30, 215);
+    Linear l(1, -8);
 
     test.plot(q);
     test.plot(l);
