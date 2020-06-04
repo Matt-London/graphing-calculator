@@ -17,18 +17,22 @@ class Cartesian {
 
         vector<vector<char>> graph;
         vector<Coordinate> plotted; // Lists all coordinates graphed
+        vector<Function> functions; // All graphed functions
     
     public:
         // ================ Constructors ================
         Cartesian() {
             height = 0;
             width = 0;
+            set_axes();
             resize();
             reset();
         }
         Cartesian(int h, int w) {
             height = h;
             width = w;
+
+            set_axes();
 
             // Build graph size
             resize();
@@ -57,6 +61,16 @@ class Cartesian {
             return false;
         }
 
+        // Update graph from plotted coordinates vector
+        void update() {
+            resize();
+            set_axes(yAxis, xAxis);
+            reset();
+            for(int i = 0; i < plotted.size(); i++) {
+                plot(plotted[i]);
+            }
+        }
+
         // Rebuild graph size
         void resize() {
             graph.clear();
@@ -69,17 +83,6 @@ class Cartesian {
             }
             graph.resize(height, vector<char>(width));
 
-            yAxis = height / 2;
-            xAxis = width / 2;
-        }
-
-        // Update graph from plotted coordinates vector
-        void update() {
-            resize();
-            reset();
-            for(int i = 0; i < plotted.size(); i++) {
-                plot(plotted[i]);
-            }
         }
 
         // Clear graph
@@ -167,7 +170,7 @@ class Cartesian {
         
         // Plot equations
         void plot(Linear eq) { // Void?
-            bool trip = false;
+            functions.push_back(eq); // Add to registry
             double m = eq.get_slope();
             double b = eq.get_yInt();
 
@@ -177,6 +180,7 @@ class Cartesian {
             }
         }
         void plot(Quadratic eq) {
+            functions.push_back(eq); // Add to registry
             double a = eq.get_a();
             double b = eq.get_b();
             double c = eq.get_c();
@@ -190,10 +194,12 @@ class Cartesian {
         // ================ Sets ================
         void set_height(int h) {
             height = h;
+            set_axes();
             update();
         }
         void set_width(int w) {
             width = w;
+            set_axes();
             update();
         }
         void set_axis(bool a) {
@@ -203,6 +209,28 @@ class Cartesian {
         void set_coord_limit(int lim) {
             coordLimit = lim;
             update();
+        }
+
+        // Set y and x axis
+        // user entered
+        void set_offset(int y, int x) {
+            set_axes(y, x);
+            update();
+        }
+
+        void set_offset() { // default
+            set_axes();
+            update();
+        }
+
+        // program entered
+        void set_axes(int y, int x) {
+            yAxis = y;
+            xAxis = x;
+        }
+        void set_axes() {
+            yAxis = height / 2;
+            xAxis = width / 2;
         }
 
         // ================ Gets ================
