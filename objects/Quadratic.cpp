@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class Quadratic {
+class Quadratic : public Function {
     private:
         double a;
         double b;
