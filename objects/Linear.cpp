@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class Linear {
+class Linear : public Function {
     private:
         double m;
         double b;
