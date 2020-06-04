@@ -3,6 +3,7 @@
 #include <cmath>
 #include <vector>
 
+#include "objects/Function.cpp"
 #include "objects/Coordinate.cpp"
 #include "objects/Linear.cpp"
 #include "objects/Quadratic.cpp"
@@ -19,6 +20,5 @@ int main() {
     test.plot(l);
     test.set_height(30);
     test.set_width(60);
-
     test.print_graph();
 }
