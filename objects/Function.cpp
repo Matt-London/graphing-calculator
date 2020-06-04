@@ -1,0 +1,6 @@
+class Function {
+    public:
+        Function() {
+
+        }
+};
