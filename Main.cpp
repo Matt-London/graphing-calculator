@@ -8,6 +8,7 @@
 #include "objects/Linear.cpp"
 #include "objects/Quadratic.cpp"
 #include "objects/Cartesian.cpp"
+#include "objects/Polynomial.cpp"
 
 using namespace std;
 
