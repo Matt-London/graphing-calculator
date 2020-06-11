@@ -1,6 +1,7 @@
-class Function {
-    public:
-        Function() {
+#include "Function.hpp"
 
-        }
-};
+// ================ Constructors ================
+// Default
+Function::Function() {
+
+}

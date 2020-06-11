@@ -1,58 +1,46 @@
-#include <iostream>
-#include <string>
+#include "Coordinate.hpp"
 
-using namespace std;
+// ================ Constructors ================
+// x and y
+Coordinate::Coordinate(double x, double y) {
+    this->x = x;
+    this->y = y;
+}
+// Default
+Coordinate::Coordinate() {
+    x = 0;
+    y = 0;
+}
 
-class Coordinate {
-    private:
-        double x;
-        double y;
+// ============ Methods ===============
+bool Coordinate::equals(Coordinate b) {
+    if(this->x == b.get_x() && this->y == b.get_y()) {
+        return true;
+    }
+    return false;
+}
 
-    public:
-    
-        // ================ Constructors ================
-        Coordinate(double x, double y) {
-            this->x = x;
-            this->y = y;
-        }
-        Coordinate() {
-            x = 0;
-            y = 0;
-        }
+// ================ Sets ================
+void Coordinate::set_x(double x) {
+    this->x = x;
+}
+void Coordinate::set_y(double y) {
+    this->y = y;
+}
+void Coordinate::set_coord(double x, double y) {
+    this->x = x;
+    this->y = y;
+}
 
-        // ================ Sets ================
-        void set_x(double x) {
-            this->x = x;
-        }
-        void set_y(double y) {
-            this->y = y;
-        }
-        void set_coord(double x, double y) {
-            this->x = x;
-            this->y = y;
-        }
+// ================ Gets ================
+double Coordinate::get_x() {
+    return x;
+}
+double Coordinate::get_y() {
+    return y;
+}
 
-        // ================ Gets ================
-        double get_x() {
-            return x;
-        }
-        double get_y() {
-            return y;
-        }
-
-        // ============ Methods ===============
-        bool equals(Coordinate b) {
-            if(this->x == b.get_x() && this->y == b.get_y()) {
-                return true;
-            }
-            return false;
-        }
-
-        // ================ Debug ================
-        string print_pair() {
-            return "(" + to_string(x) + ", " + to_string(y) + ")";
-        }
-};
-
-
-
+// ================ Debug ================
+string Coordinate::print_pair() {
+    return "(" + to_string(x) + ", " + to_string(y) + ")";
+}

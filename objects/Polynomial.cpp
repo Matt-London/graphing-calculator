@@ -1,4 +1,2 @@
-class Polynomial {
-    private:
-        vector<int> coefficients;
-};
+#include "Polynomial.hpp"
+
