@@ -8,6 +8,8 @@
 
 #include "Coordinate.hpp"
 #include "Function.hpp"
+#include "Linear.hpp"
+#include "Quadratic.hpp"
 
 
 using namespace std;

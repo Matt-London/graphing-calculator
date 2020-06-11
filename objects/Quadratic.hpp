@@ -6,6 +6,7 @@
 #include <cmath>
 
 #include "Coordinate.hpp"
+#include "Function.hpp"
 
 using namespace std;
 
