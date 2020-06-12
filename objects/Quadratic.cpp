@@ -38,6 +38,21 @@ void Quadratic::solve(double x1, double y1, double x2, double y2, double x3, dou
     }
 }
 
+// ================ Constructors ================
+Quadratic::Quadratic() {
+    a = 0;
+    b = 0;
+    c = 0;
+}
+Quadratic::Quadratic(double a, double b, double c) {
+    this->a = a;
+    this->b = b;
+    this->c = c;
+}
+Quadratic::Quadratic(Coordinate one, Coordinate two, Coordinate three) {
+    process_coordinates(one, two, three);
+}
+
 // ================ Sets ================
 void Quadratic::set_a(double a) {
     this->a = a;

@@ -5,7 +5,7 @@
 #include <string>
 
 #include "Function.hpp"
-#include "Coordinate.cpp"
+#include "Coordinate.hpp"
 
 using namespace std;
 
