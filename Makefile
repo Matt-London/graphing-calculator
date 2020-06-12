@@ -2,7 +2,7 @@ Main: Main.o objects/Cartesian.o objects/Coordinate.o objects/Function.o objects
 	g++ Main.o objects/Cartesian.o objects/Coordinate.o objects/Function.o objects/Linear.o objects/Polynomial.o objects/Quadratic.o -o Main
 
 Main.o: Main.cpp
-	g++ -c Main.cpp -o Main.o
+	g++ -c Main.cpp
 
 objects/Cartesian.o: objects/Cartesian.cpp objects/Cartesian.hpp
 	g++ -c objects/Cartesian.cpp -o objects/Cartesian.o

@@ -55,7 +55,7 @@ class Quadratic : public Function {
         double *solve(double y);
 
         // ================ Debug ================
-        string print_equation();
+        void print_equation();
 
 };
 

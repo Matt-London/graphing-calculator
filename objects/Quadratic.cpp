@@ -105,6 +105,6 @@ double *Quadratic::solve(double y) {
 }
 
 // ================ Debug ================
-string Quadratic::print_equation() {
-    return "f(x) = " + to_string(a) + "x^2 + " + to_string(b) + "x + " + to_string(c);
+void Quadratic::print_equation() {
+    cout << "f(x) = " << to_string(a) << "x^2 + " << to_string(b) << "x + " << to_string(c) << "\n";
 }

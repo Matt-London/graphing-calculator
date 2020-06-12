@@ -10,13 +10,13 @@
 using namespace std;
 
 int main() {
-    Cartesian test;
-    Quadratic q(1, 30, 215);
-    Linear l(1, -8);
+    Cartesian test(30, 60);
+    Coordinate one(-21, 4);
+    Coordinate two(-8.6, 30);
+    Coordinate three(28, -29);
+    Quadratic q(one, two, three);
+    q.print_equation();
 
     test.plot(q);
-    test.plot(l);
-    test.set_height(30);
-    test.set_width(60);
     test.print_graph();
 }
