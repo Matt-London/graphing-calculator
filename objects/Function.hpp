@@ -9,6 +9,7 @@ class Function {
         // ================ Methods ================
         double trace(double x);
         double *solve(double y);
+        void print_equation();
 
 };
 
