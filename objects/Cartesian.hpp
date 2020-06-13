@@ -9,6 +9,7 @@
 #include "Coordinate.hpp"
 #include "Function.hpp"
 #include "Linear.hpp"
+#include "Polynomial.hpp"
 #include "Quadratic.hpp"
 
 
@@ -69,6 +70,7 @@ class Cartesian {
         // Plot equations
         void plot(Linear eq);
         void plot(Quadratic eq);
+        void plot(Polynomial eq);
         // void plot(Function eq);
 
         // ================ Sets ================
