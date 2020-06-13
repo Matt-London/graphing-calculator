@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 #include "objects/Function.hpp"
 #include "objects/Coordinate.hpp"
@@ -10,14 +11,18 @@
 using namespace std;
 
 int main() {
-    Cartesian test(30, 60);
-    Coordinate one(-21, 4);
-    Coordinate two(-8.6, 30);
-    Coordinate three(28, -29);
+    vector<double> t;
+    t.push_back(0);
+    t.push_back(0);
+    t.push_back(0);
+    t.push_back(-0.25);
 
-    Quadratic q(one, two, three);
-    q.print_equation();
+    Polynomial p(t);
+    Cartesian plane(30, 60);
+    plane.plot(p);
 
-    test.plot(q);
-    test.print_graph();
+    p.print_equation();
+    plane.print_graph();
+
+    return 0;
 }
