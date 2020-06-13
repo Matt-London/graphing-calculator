@@ -170,6 +170,14 @@ void Cartesian::plot(Quadratic eq) {
         plot(x, y);
     }
 }
+void Cartesian::plot(Polynomial eq) {
+    functions.push_back(eq); // Add to registry
+
+    for(int x = -1 * coordLimit / 2; x < coordLimit / 2; x++) {
+        double y = eq.trace(x);
+        plot(x, y);
+    }
+}
 
 // ================ Sets ================
 void Cartesian::set_height(int h) {
