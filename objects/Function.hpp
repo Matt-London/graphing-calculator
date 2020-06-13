@@ -5,6 +5,11 @@ class Function {
     public:
         // ================ Constructors ================
         Function();
+
+        // ================ Methods ================
+        double trace(double x);
+        double *solve(double y);
+
 };
 
 #endif

@@ -53,7 +53,7 @@ class Linear : public Function {
         double trace(double x);
 
         // returns x from f(x)
-        double solve(double y);
+        double *solve(double y);
 
         // ================ Debug ===================
         // Print f(x) = mx + b

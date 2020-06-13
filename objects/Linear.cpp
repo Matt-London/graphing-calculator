@@ -89,8 +89,10 @@ double Linear::trace(double x) {
 }
 
 // returns x from f(x)
-double Linear::solve(double y) {
-    return (y - b) / m;
+double *Linear::solve(double y) {
+    static double x[1];
+    x[0] = (y - b) / m;
+    return x;
 }
 
 // ================ Debug ===================

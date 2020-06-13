@@ -69,6 +69,7 @@ class Cartesian {
         // Plot equations
         void plot(Linear eq);
         void plot(Quadratic eq);
+        // void plot(Function eq);
 
         // ================ Sets ================
         void set_height(int h);

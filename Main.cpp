@@ -14,6 +14,7 @@ int main() {
     Coordinate one(-21, 4);
     Coordinate two(-8.6, 30);
     Coordinate three(28, -29);
+
     Quadratic q(one, two, three);
     q.print_equation();
 

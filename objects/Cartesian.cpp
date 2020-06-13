@@ -156,22 +156,17 @@ bool Cartesian::vector_plot(double x, double y) {
 // Plot equations
 void Cartesian::plot(Linear eq) { // Void?
     functions.push_back(eq); // Add to registry
-    double m = eq.get_slope();
-    double b = eq.get_yInt();
 
     for(int x = -1 * coordLimit / 2; x < coordLimit / 2; x++) {
-        double y = (m * x) + b;
+        double y = eq.trace(x);
         plot(x, y);
     }
 }
 void Cartesian::plot(Quadratic eq) {
     functions.push_back(eq); // Add to registry
-    double a = eq.get_a();
-    double b = eq.get_b();
-    double c = eq.get_c();
 
     for(int x = -1 * coordLimit / 2; x < coordLimit / 2; x++) {
-        double y = (a * pow(x, (double) 2) + (b * x) + c);
+        double y = eq.trace(x);
         plot(x, y);
     }
 }
