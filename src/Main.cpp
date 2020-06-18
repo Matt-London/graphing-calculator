@@ -1,12 +1,12 @@
 #include <iostream>
 #include <vector>
 
-#include "objects/Function.hpp"
-#include "objects/Coordinate.hpp"
-#include "objects/Linear.hpp"
-#include "objects/Quadratic.hpp"
-#include "objects/Cartesian.hpp"
-#include "objects/Polynomial.hpp"
+#include "../include/objects/Function.hpp"
+#include "../include/objects/Coordinate.hpp"
+#include "../include/objects/Linear.hpp"
+#include "../include/objects/Quadratic.hpp"
+#include "../include/objects/Cartesian.hpp"
+#include "../include/objects/Polynomial.hpp"
 
 using namespace std;
 
