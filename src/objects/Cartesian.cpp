@@ -154,6 +154,16 @@ bool Cartesian::vector_plot(double x, double y) {
 }
 
 // Plot equations
+// void Cartesian::plot(Function eq) {
+//     switch (eq.get_type()) {
+//     case 1:
+//         plot((Linear) eq);
+//         break;
+    
+//     default:
+//         break;
+//     }
+// }
 void Cartesian::plot(Linear eq) { // Void?
     functions.push_back(eq); // Add to registry
 
