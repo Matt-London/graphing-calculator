@@ -11,17 +11,11 @@
 using namespace std;
 
 int main() {
-    vector<double> t;
-    t.push_back(0);
-    t.push_back(0);
-    t.push_back(0);
-    t.push_back(-0.25);
-
-    Polynomial p(t);
+    Quadratic q(1, 0, 0);
     Cartesian plane(30, 60);
-    plane.plot(p);
+    plane.plot(q);
 
-    p.print_equation();
+    q.print_equation();
     plane.print_graph();
 
     return 0;
