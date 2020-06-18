@@ -39,17 +39,17 @@ void Quadratic::solve(double x1, double y1, double x2, double y2, double x3, dou
 }
 
 // ================ Constructors ================
-Quadratic::Quadratic() {
+Quadratic::Quadratic() : Function::Function(3) {
     a = 0;
     b = 0;
     c = 0;
 }
-Quadratic::Quadratic(double a, double b, double c) {
+Quadratic::Quadratic(double a, double b, double c) : Function::Function(3) {
     this->a = a;
     this->b = b;
     this->c = c;
 }
-Quadratic::Quadratic(Coordinate one, Coordinate two, Coordinate three) {
+Quadratic::Quadratic(Coordinate one, Coordinate two, Coordinate three) : Function::Function(3) {
     process_coordinates(one, two, three);
 }
 

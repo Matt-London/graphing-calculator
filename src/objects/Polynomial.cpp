@@ -2,12 +2,12 @@
 
 // =============== Constructors ===============
 // Default
-Polynomial::Polynomial() {
+Polynomial::Polynomial() : Function::Function(3) {
     degree = 0;
 }
 
 // Takes vector
-Polynomial::Polynomial(vector<double> coefficients) {
+Polynomial::Polynomial(vector<double> coefficients) : Function::Function(3) {
     set_coefficients(coefficients);
 }
 

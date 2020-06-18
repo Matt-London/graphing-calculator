@@ -24,14 +24,14 @@ void Linear::process_coordinates(Coordinate one, Coordinate two) {
 // PUBLIC
 // ================ Constructors ================
 // Default
-Linear::Linear() {
+Linear::Linear() : Function::Function(1) {
     m = 0;
     b = 0;
     sign = '+';
 }
 
 // m and b
-Linear::Linear(double m, double b) {
+Linear::Linear(double m, double b) : Function::Function(1) {
     this->m = m;
     this->b = b;
     if(b >= 0) {
@@ -43,7 +43,7 @@ Linear::Linear(double m, double b) {
 }
 
 // Two coords
-Linear::Linear(Coordinate a, Coordinate b) {
+Linear::Linear(Coordinate a, Coordinate b) : Function::Function(1) {
     one = a;
     two = b;
     this->process_coordinates(a, b);
