@@ -1,20 +1,3 @@
-Main.cpp:
-Various tests
-
-Coordinate.cpp:
-No changes
-
-Linear.cpp:
-Now extends Function
-
-Quadratic.cpp:
-Now extends Function
-
-Function.cpp:
-Built
-Added parent class for function
-
-Cartesian.cpp:
-Added feature to set custom offset
-Saves graphed functions
+6/18/20
+Restructure to reflect proper practice
 
