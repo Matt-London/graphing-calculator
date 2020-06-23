@@ -11,7 +11,16 @@
 using namespace std;
 
 int main() {
-    Quadratic q(1, 0, 0);
+    vector<double> v;
+    v.push_back(0);
+    v.push_back(0);
+    v.push_back(0);
+    v.push_back(0);
+
+    v.push_back(0.00001);
+
+
+    Polynomial q(v);
     Cartesian plane(30, 60);
     plane.plot(q);
 
