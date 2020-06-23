@@ -97,6 +97,6 @@ double *Linear::solve(double y) {
 
 // ================ Debug ===================
 // Print f(x) = mx + b
-string Linear::print_equation() {
-    return "f(x) = " + to_string(m) + "x " + sign + " " + to_string(b);
+void Linear::print_equation() {
+    std::cout << "f(x) = " + to_string(m) + "x " + sign + " " + to_string(b) << std::endl;
 }

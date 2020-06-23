@@ -14,9 +14,9 @@ class Function {
         int get_type();
 
         // ================ Methods ================
-        double trace(double x);
-        double *solve(double y);
-        void print_equation();
+        virtual double trace(double x);
+        virtual double *solve(double y);
+        virtual void print_equation();
 
 
 };

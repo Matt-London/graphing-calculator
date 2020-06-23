@@ -17,3 +17,6 @@ int Function::get_type() {
 }
 
 // ================ Methods ===================
+double Function::trace(double x) {return 0;}
+double *Function::solve(double y) {return nullptr;}
+void Function::print_equation() {}

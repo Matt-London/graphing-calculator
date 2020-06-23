@@ -49,13 +49,13 @@ class Quadratic : public Function {
         bool equals(Quadratic test);
 
         // Returns f(x) from x
-        double trace(double x);
+        virtual double trace(double x);
 
         // returns x from f(x)
-        double *solve(double y);
+        virtual double *solve(double y);
 
         // ================ Debug ================
-        void print_equation();
+        virtual void print_equation();
 
 };
 

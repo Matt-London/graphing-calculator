@@ -50,14 +50,14 @@ class Linear : public Function {
         bool equals(Linear a);
 
         // Returns f(x) from x
-        double trace(double x);
+        virtual double trace(double x);
 
         // returns x from f(x)
-        double *solve(double y);
+        virtual double *solve(double y);
 
         // ================ Debug ===================
         // Print f(x) = mx + b
-        string print_equation();
+        virtual void print_equation();
 
 };
 

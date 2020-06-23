@@ -38,13 +38,13 @@ class Polynomial : public Function {
         void add_coefficient(double x);
 
         // Returns f(x) from x
-        double trace(double x);
+        virtual double trace(double x);
 
         // Returns x from f(x)
         // double *solve(double y);
 
         // Prints in format f(x) = ...
-        void print_equation();
+        virtual void print_equation();
 
 
 
