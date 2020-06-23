@@ -68,10 +68,7 @@ class Cartesian {
         bool vector_plot(double x, double y);
         
         // Plot equations
-        void plot(Function eq);
-        void plot(Linear eq);
-        void plot(Quadratic eq);
-        void plot(Polynomial eq);
+        void plot(Function &eq);
 
         // ================ Sets ================
         void set_height(int h);

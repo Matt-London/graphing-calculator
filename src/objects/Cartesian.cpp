@@ -154,35 +154,7 @@ bool Cartesian::vector_plot(double x, double y) {
 }
 
 // Plot equations
-// void Cartesian::plot(Function eq) {
-//     switch (eq.get_type()) {
-//     case 1:
-//         plot((Linear) eq);
-//         break;
-    
-//     default:
-//         break;
-//     }
-// }
-void Cartesian::plot(Linear eq) { // Void?
-    functions.push_back(eq); // Add to registry
-
-    for(int x = -1 * coordLimit / 2; x < coordLimit / 2; x++) {
-        double y = eq.trace(x);
-        plot(x, y);
-    }
-}
-void Cartesian::plot(Quadratic eq) {
-    functions.push_back(eq); // Add to registry
-
-    for(int x = -1 * coordLimit / 2; x < coordLimit / 2; x++) {
-        double y = eq.trace(x);
-        plot(x, y);
-    }
-}
-void Cartesian::plot(Polynomial eq) {
-    functions.push_back(eq); // Add to registry
-
+void Cartesian::plot(Function &eq) {
     for(int x = -1 * coordLimit / 2; x < coordLimit / 2; x++) {
         double y = eq.trace(x);
         plot(x, y);
