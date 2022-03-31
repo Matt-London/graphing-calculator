@@ -30,7 +30,12 @@ Cartesian::Cartesian(int h, int w) {
 void Cartesian::print_graph() {
     for(int i = 0; i < graph.size(); i++) {
         for(int j = 0; j < graph[0].size(); j++) {
-            printf("%c", graph[i][j]);
+            if (graph[i][j] == '-') {
+                printf("--");
+            }
+            else {
+                printf(" %c", graph[i][j]);
+            }
         }
         printf("\n");
     }
